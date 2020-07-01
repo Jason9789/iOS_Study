@@ -14,24 +14,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
     
+    var leftDiceNumber = 1
+    var rightDiceNumber = 5
+    
     // viewDidLoad란?
     // 앱이 실행될 때 (화면이 Load가 되었을 때) 실행되는 함수.
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // WHO         WHAT    VALUE
-        diceImageView1.image = #imageLiteral(resourceName: "DiceSix")
-        diceImageView2.image = #imageLiteral(resourceName: "DiceTwo")
-        
-        // Who.What = Value
-        // alpha : 이미지의 투명도를 나타내는 값.
-        // diceImageView1.alpha = 0.5
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        print("Button got tapped.")
-        diceImageView1.image = #imageLiteral(resourceName: "DiceFour")
-        diceImageView2.image = #imageLiteral(resourceName: "DiceFour")
+        
+        print("leftDiceNumber at beginning = \(leftDiceNumber)")
+        print("rightDiceNumber at beginning = \(rightDiceNumber)")
+        
+        diceImageView1.image = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][leftDiceNumber]
+        diceImageView2.image = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][rightDiceNumber]
+        
+        leftDiceNumber += 1
+        rightDiceNumber -= 1
+        
+        if (leftDiceNumber == 6) {
+            leftDiceNumber = 0
+        }
+        
+        if (leftDiceNumber == 1) {
+            rightDiceNumber = 5
+        }
+        
+        print("leftDiceNumber at the end = \(leftDiceNumber)")
+        print("rightDiceNumber at the end = \(rightDiceNumber)")
+        
     }
     
 }
