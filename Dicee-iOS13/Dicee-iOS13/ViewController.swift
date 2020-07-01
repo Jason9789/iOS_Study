@@ -14,9 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
     
-    var leftDiceNumber = 1
-    var rightDiceNumber = 5
-    
     // viewDidLoad란?
     // 앱이 실행될 때 (화면이 Load가 되었을 때) 실행되는 함수.
     override func viewDidLoad() {
@@ -26,26 +23,18 @@ class ViewController: UIViewController {
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         
-        print("leftDiceNumber at beginning = \(leftDiceNumber)")
-        print("rightDiceNumber at beginning = \(rightDiceNumber)")
+        // random한 정수 값.
+        // Int.random(in: firstNumber...LastNumber)
+        // first와 Last 사이의 값이 랜덤으로 나오게 된다.
         
-        diceImageView1.image = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][leftDiceNumber]
-        diceImageView2.image = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][rightDiceNumber]
+        let diceArray = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ]
         
-        leftDiceNumber += 1
-        rightDiceNumber -= 1
+        diceImageView1.image = diceArray[Int.random(in: 0...5)]
+        diceImageView2.image = diceArray[Int.random(in: 0...5)]
         
-        if (leftDiceNumber == 6) {
-            leftDiceNumber = 0
-        }
-        
-        if (leftDiceNumber == 1) {
-            rightDiceNumber = 5
-        }
-        
-        print("leftDiceNumber at the end = \(leftDiceNumber)")
-        print("rightDiceNumber at the end = \(rightDiceNumber)")
-        
+        // or
+//        diceImageView1.image = diceArray.randomElement()
+//        diceImageView2.image = diceArray.randomElement()
     }
     
 }
