@@ -1,16 +1,17 @@
-// func
 
-func greeting1() {
-    print("Hello")
+
+func loveCalculator() {
+    let loveScore = Int.random(in: 0...100)
     
-    func greeting2() {
-        print("Hey")
+    if loveScore >= 80 {
+        print("You love each other like Kanye loves Kanys.")
     }
-    
-    greeting2()
+    else if loveScore <= 40 && loveScore < 80 {
+        print("You go together like Coke and Mentos.")
+    }
+    else {
+        print("You'll be forever alone.")
+    }
 }
 
-greeting1()
-
-
-
+loveCalculator()
