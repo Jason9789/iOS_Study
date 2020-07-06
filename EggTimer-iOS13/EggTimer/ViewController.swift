@@ -1,12 +1,5 @@
-//
-//  ViewController.swift
-//  EggTimer
-//
-//  Created by Angela Yu on 08/07/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
-//
-
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -21,6 +14,9 @@ class ViewController: UIViewController {
     var totalTime = 0
     var secondsPassed = 0
     var secondsRemaining = 0
+    
+    // alarm
+    var player: AVAudioPlayer!
     
     // 선택한 계란에 따라 soft, medium, hard 선택
     @IBAction func hardnessSelected(_ sender: UIButton) {
@@ -68,7 +64,10 @@ class ViewController: UIViewController {
             progressBar.progress = Float(percentageProgress)
             titleLable.text = "DONE!"
             print("DONE!!")
+            
+            let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
+            player = try! AVAudioPlayer(contentsOf: url!)
+            player.play()
         }
     }
-    
 }
