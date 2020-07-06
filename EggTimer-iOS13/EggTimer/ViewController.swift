@@ -20,10 +20,8 @@ class ViewController: UIViewController {
     var timer = Timer()
     var totalTime = 0
     var secondsPassed = 0
+    var secondsRemaining = 0
     
-    
-    
-
     // 선택한 계란에 따라 soft, medium, hard 선택
     @IBAction func hardnessSelected(_ sender: UIButton) {
         
@@ -36,20 +34,29 @@ class ViewController: UIViewController {
 
         // 선택된 계란에 따라서 남은 초시간 설정
         totalTime = eggTime[hardness]!
+        secondsRemaining = eggTime[hardness]!
+        
+        progressBar.progress = 0.0
+        secondsPassed = 0
+        titleLable.text = hardness
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     // @objc : object-c
     @objc func updateTimer() {
+        // Soft, Medium, Hard
+        
         if secondsPassed < totalTime {
             
             let percentageProgress = Float(secondsPassed) / Float(totalTime)
             
             progressBar.progress = Float(percentageProgress)
             print(Float(percentageProgress))
+            titleLable.text = "\(secondsRemaining)s"
             
-            secondsPassed += 1    // 1초씩 감소
+            secondsPassed += 1    // 1초씩 시간 지남
+            secondsRemaining -= 1 // 1초씩 감소
         }
             
         // 시간이 다 되었을 시.
