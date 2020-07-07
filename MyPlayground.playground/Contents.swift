@@ -1,25 +1,25 @@
 
-
-func greeting() {
-    print("Hello")
-}
-
-greeting()
-
-func greeting2(name: String) {
-    print("\(name) Hello")
-}
-
-greeting2(name: "Jason")
-
-func greeting3(name: String) -> Bool {
-    if name == "Angela" || name == "Jason" {
-        return true
-    } else {
-        return false
+struct Town {
+    let name: String
+    var citizens: [String]
+    var resources: [String: Int]
+    
+    init(citizens: [String], name: String, resources: [String:Int]) {
+        self.citizens = citizens
+        self.name = name.uppercased()
+        self.resources = resources
+    }
+    
+    mutating func harvestRice() {
+        resources["Rice"] = 100
     }
 }
 
-var doorShouldOpen = greeting3(name: "Angela")
-print(doorShouldOpen)
+var myTown = Town(citizens: ["Angela", "Jack Bauer"], name: "Angelaland", resources: ["Wool" : 75])
 
+myTown.citizens.append("Keanu Reeves")
+
+print("People of \(myTown.name): \(myTown.citizens)")
+
+myTown.harvestRice()
+print(myTown.resources)
