@@ -8,17 +8,49 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var searchTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        searchTextField.delegate = self
     }
 
-
+    // 상단의 search Button
+    @IBAction func searchPressed(_ sender: UIButton) {
+        // 키보드 작업이 끝나면 endEditing함 ( 키보드가 자동으로 사라짐 )
+        searchTextField.endEditing(true)
+        print(searchTextField.text!)
+    }
+    
+    // textFiled에서 버튼을 누르면 반응함 -> ShouldReturn
+    // Return Key on KeyBoard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        print(searchTextField.text!)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        } else {
+            textField.placeholder = "Type Something"
+            return false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // clear textField
+        // Use searchTextField.text to get the weather for that city.
+        
+        searchTextField.text = ""
+    }
+    
 }
 
