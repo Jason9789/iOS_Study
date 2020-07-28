@@ -1,25 +1,11 @@
 
-struct Town {
-    let name: String
-    var citizens: [String]
-    var resources: [String: Int]
-    
-    init(citizens: [String], name: String, resources: [String:Int]) {
-        self.citizens = citizens
-        self.name = name.uppercased()
-        self.resources = resources
-    }
-    
-    mutating func harvestRice() {
-        resources["Rice"] = 100
-    }
-}
+import UIKit
 
-var myTown = Town(citizens: ["Angela", "Jack Bauer"], name: "Angelaland", resources: ["Wool" : 75])
+let array = [6, 2, 3, 9, 4, 1]
 
-myTown.citizens.append("Keanu Reeves")
 
-print("People of \(myTown.name): \(myTown.citizens)")
 
-myTown.harvestRice()
-print(myTown.resources)
+let newArray = array.map{"\($0 + 1)"}
+
+print(newArray)
+
