@@ -49,8 +49,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
 
+        
+        cell.textLabel?.textAlignment = NSTextAlignment.center
+        
         // note that indexPath.section is used rather than indexPath.row
-        cell.textLabel?.text = self.animals[indexPath.section]
+        if indexPath.section == 0 {
+            cell.textLabel?.text = "ADD"
+            
+//            if let text = cell.textLabel?.text {
+//                let attributedString = NSMutableAttributedString(string: text)
+//
+//                cell.textLabel?.attributedText = attributedString
+//
+//                let imageAttachment = NSTextAttachment()
+//                imageAttachment.image = UIImage(named: "plus.circle")
+//
+//                attributedString.append(NSAttributedString(attachment: imageAttachment))
+////                cell.textLabel?.text = attributedString
+//                cell.textLabel?.attributedText = attributedString
+//            }
+        }
+        else {
+            cell.textLabel?.text = self.animals[indexPath.section]
+        }
 
         // add border and color
         cell.backgroundColor = UIColor.white
