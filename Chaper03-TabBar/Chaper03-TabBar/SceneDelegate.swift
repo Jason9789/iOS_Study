@@ -19,9 +19,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // 2. 탭 바로부터 탭 바 아이템 배열을 가져온다.
             if let tbItems = tbC.tabBar.items {
                 // 3. 탭 바 아이템에 커스텀 이미지를 등록한다.
-                tbItems[0].image = UIImage(named: "calendar")
-                tbItems[1].image = UIImage(named: "file-tree")
-                tbItems[2].image = UIImage(named: "photo")
+//                tbItems[0].image = UIImage(named: "calendar")
+//                tbItems[1].image = UIImage(named: "file-tree")
+//                tbItems[2].image = UIImage(named: "photo")
+                tbItems[0].image = UIImage(named: "designbump")?.withRenderingMode(.alwaysOriginal)
+                tbItems[1].image = UIImage(named: "rss")?.withRenderingMode(.alwaysOriginal)
+                tbItems[2].image = UIImage(named: "facebook")?.withRenderingMode(.alwaysOriginal)
+                
+                for tbItem in  tbItems {
+                    let image = UIImage(named: "checkmark")?.withRenderingMode(.alwaysOriginal)
+                    tbItem.selectedImage = image // TabBar Item이 활성화 되었을 때 표시
+                }
+                
+                // 탭 바 아이템별 텍스트 색상 속성 설정
+                // 외형 프록시 객체를 이용하여 아이템의 타이틀 색상과 폰트 크기를 설정
+                let tbItemProxy = UITabBarItem.appearance()
+                
+                let disabledLineattribute : [NSAttributedString.Key : Any] = [
+                    .foregroundColor : UIColor.gray
+                ]
+                let selectedLineattribute : [NSAttributedString.Key : Any] = [
+                    .foregroundColor : UIColor.red
+                ]
+                let normalLineattribute : [NSAttributedString.Key : Any] = [
+                    .font : UIFont.systemFont(ofSize: 15)
+                ]
+                
+                tbItemProxy.setTitleTextAttributes(disabledLineattribute, for: .disabled)
+                tbItemProxy.setTitleTextAttributes(selectedLineattribute, for: .selected)
+                tbItemProxy.setTitleTextAttributes(normalLineattribute, for: .normal)
+                
                 
                 // 4. 탭 바 아이템에 타이틀을 설정한다.
                 tbItems[0].title = "calendar"
@@ -29,13 +56,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 tbItems[2].title = "photo"
             }
             
+            let tbProxy = UITabBar.appearance()
             // 5. 활성화된 탭 바 아이템의 이미지 색상을 변경한다.
-            tbC.tabBar.tintColor = UIColor.white
+            tbProxy.tintColor = UIColor.white
             
             // 6. 탭 바에 배경 이미지를 설정한다.
-            //            tbC.tabBar.backgroundImage = UIImage(named: "connectivity-bar")
-            let image = UIImage(named: "menubar-bg-mini")!
-            tbC.tabBar.barTintColor = UIColor(patternImage: image)
+//            tbProxy.backgroundImage = UIImage(named: "menubar-bg-mini")
+            //            tbC.tabBar.backgroundImage = UIImage(named: "menubar-bg-mini")
+            //            let image = UIImage(named: "menubar-bg-mini")!
+            //            tbC.tabBar.barTintColor = UIColor(patternImage: image)
         }
         
         func sceneDidDisconnect(_ scene: UIScene) {
