@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06997F9F25A6CE9100BD611C /* NewAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06997F9E25A6CE9100BD611C /* NewAppDelegate.swift */; };
 		069E7ECE25A36F1600A8238B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069E7ECD25A36F1600A8238B /* AppDelegate.swift */; };
 		069E7ED025A36F1600A8238B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069E7ECF25A36F1600A8238B /* SceneDelegate.swift */; };
 		069E7ED225A36F1600A8238B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069E7ED125A36F1600A8238B /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06997F9E25A6CE9100BD611C /* NewAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppDelegate.swift; sourceTree = "<group>"; };
 		069E7ECA25A36F1600A8238B /* Chaper03-TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chaper03-TabBar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		069E7ECD25A36F1600A8238B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		069E7ECF25A36F1600A8238B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				069E7EDB25A36F1E00A8238B /* Info.plist */,
 				069E7EE225A3702A00A8238B /* SecondViewController.swift */,
 				069E7EE525A3704A00A8238B /* ThirdViewController.swift */,
+				06997F9E25A6CE9100BD611C /* NewAppDelegate.swift */,
 			);
 			path = "Chaper03-TabBar";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				069E7EE325A3702A00A8238B /* SecondViewController.swift in Sources */,
 				069E7ED225A36F1600A8238B /* ViewController.swift in Sources */,
 				069E7EE625A3704A00A8238B /* ThirdViewController.swift in Sources */,
+				06997F9F25A6CE9100BD611C /* NewAppDelegate.swift in Sources */,
 				069E7ECE25A36F1600A8238B /* AppDelegate.swift in Sources */,
 				069E7ED025A36F1600A8238B /* SceneDelegate.swift in Sources */,
 			);
