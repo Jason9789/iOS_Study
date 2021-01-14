@@ -73,6 +73,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         todoListTableView?.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 이미 체크 되어 있는 경우는 return
+        guard !list[indexPath.row].isComplete else {
+            return
+        }
+        
+        // 리스트 선택 시 완료된 할 일 표시
+        list[indexPath.row].isComplete = true
+        
+        let dialog = UIAlertController(title: "ToDo List", message: "일을 완료했습니다!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+        dialog.addAction(action)
+        self.present(dialog, animated: true, completion: nil)
+        
+        todoListTableView?.reloadData()
+    }
     
 }
 
