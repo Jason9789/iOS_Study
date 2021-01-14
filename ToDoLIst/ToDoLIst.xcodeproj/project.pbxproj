@@ -14,6 +14,7 @@
 		064A3A6025B0124000E6E0B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A3A5F25B0124000E6E0B5 /* Assets.xcassets */; };
 		064A3A6325B0124000E6E0B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A3A6125B0124000E6E0B5 /* LaunchScreen.storyboard */; };
 		064A3A6C25B014BC00E6E0B5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A3A6B25B014BC00E6E0B5 /* AddViewController.swift */; };
+		064A3A7025B023DA00E6E0B5 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A3A6F25B023DA00E6E0B5 /* TodoList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		064A3A6225B0124000E6E0B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		064A3A6425B0124000E6E0B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A3A6B25B014BC00E6E0B5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		064A3A6F25B023DA00E6E0B5 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				064A3A6125B0124000E6E0B5 /* LaunchScreen.storyboard */,
 				064A3A6425B0124000E6E0B5 /* Info.plist */,
 				064A3A6B25B014BC00E6E0B5 /* AddViewController.swift */,
+				064A3A6F25B023DA00E6E0B5 /* TodoList.swift */,
 			);
 			path = ToDoLIst;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064A3A7025B023DA00E6E0B5 /* TodoList.swift in Sources */,
 				064A3A5B25B0123D00E6E0B5 /* ViewController.swift in Sources */,
 				064A3A5725B0123D00E6E0B5 /* AppDelegate.swift in Sources */,
 				064A3A6C25B014BC00E6E0B5 /* AddViewController.swift in Sources */,
