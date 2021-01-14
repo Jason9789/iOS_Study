@@ -57,8 +57,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ToDo LIst" id="neU-qK-W40">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="fWC-CK-DQG"/>
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="pLK-fQ-EGJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="fWC-CK-DQG">
+                            <connections>
+                                <action selector="editButtonAction:" destination="BYZ-38-t0r" id="dIQ-FM-QPZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pLK-fQ-EGJ">
                             <connections>
                                 <action selector="addButton:" destination="BYZ-38-t0r" id="eZG-QB-288"/>
                             </connections>
@@ -114,12 +118,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ADD" id="5V4-0b-a3V">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ulK-9O-Yc8">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ulK-9O-Yc8">
                             <connections>
                                 <action selector="cancelButton:" destination="a8P-vN-G3f" id="VOT-Py-29K"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="BQS-oC-Tc7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="BQS-oC-Tc7">
                             <connections>
                                 <action selector="doneButton:" destination="a8P-vN-G3f" id="X7U-IX-8Nx"/>
                             </connections>
@@ -172,7 +176,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

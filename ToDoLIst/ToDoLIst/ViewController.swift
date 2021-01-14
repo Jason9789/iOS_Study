@@ -16,12 +16,30 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(addVC!, animated: true)
     }
     
+    @IBAction func editButtonAction(_ sender: Any) {
+        guard !list.isEmpty else {
+            return
+        }
+        todoListTableView?.setEditing(true, animated: true)
+        self.navigationItem.leftBarButtonItem = doneButton
+    }
+    
+    @objc
+    func doneButtonTap() {
+        self.navigationItem.leftBarButtonItem = editButtonItem
+        todoListTableView?.setEditing(false, animated: true)
+    }
+    
     @IBOutlet weak var todoListTableView: UITableView!
+    let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonTap))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         todoListTableView?.delegate = self
         todoListTableView?.dataSource = self
+        
+        doneButton.style = .plain
+        doneButton.target = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +66,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        list.remove(at: indexPath.row)
+        todoListTableView?.reloadData()
     }
     
     
