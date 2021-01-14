@@ -8,7 +8,21 @@
 import UIKit
 
 class AddViewController: ViewController {
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var contentTextView: UITextView!
+    
+    
     @IBAction func doneButton(_ sender: Any) {
+        
+        let title = titleTextField.text!
+        let content = contentTextView.text ?? ""
+        
+        let item: TodoList = TodoList(title: title, content: content)
+        list.append(item)
+        print(item)
+        print(list)
+        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -16,7 +30,6 @@ class AddViewController: ViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBOutlet weak var contentTextView: UITextView!
     
     
     override func viewDidLoad() {
@@ -27,4 +40,5 @@ class AddViewController: ViewController {
         contentTextView.layer.cornerRadius = 2.0  // 모서리 둥글게
         contentTextView.clipsToBounds = true  //
     }
+
 }
