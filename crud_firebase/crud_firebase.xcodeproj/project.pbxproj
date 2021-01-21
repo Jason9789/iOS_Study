@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060B1B8725B9CFB100231B9F /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060B1B8625B9CFB100231B9F /* signUpViewController.swift */; };
 		06F250F725B9625D007632F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F250F625B9625D007632F5 /* AppDelegate.swift */; };
 		06F250F925B9625D007632F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F250F825B9625D007632F5 /* SceneDelegate.swift */; };
 		06F250FB25B9625D007632F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F250FA25B9625D007632F5 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		01FB1A571AFDC54A6B5EB396 /* Pods_crud_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crud_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		060B1B8625B9CFB100231B9F /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		06F250F325B9625D007632F5 /* crud_firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crud_firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F250F625B9625D007632F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F250F825B9625D007632F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				06F2510125B9625E007632F5 /* LaunchScreen.storyboard */,
 				06F2510425B9625E007632F5 /* Info.plist */,
 				06F2512925B9789A007632F5 /* GoogleService-Info.plist */,
+				060B1B8625B9CFB100231B9F /* signUpViewController.swift */,
 			);
 			path = crud_firebase;
 			sourceTree = "<group>";
@@ -168,7 +171,6 @@
 				98CBDC3D5AF06A2ECCDB1833 /* Pods-crud_firebaseTests.debug.xcconfig */,
 				D0234ECC7EDFE8CCD16EF909 /* Pods-crud_firebaseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -413,6 +415,7 @@
 			files = (
 				06F250FB25B9625D007632F5 /* ViewController.swift in Sources */,
 				06F250F725B9625D007632F5 /* AppDelegate.swift in Sources */,
+				060B1B8725B9CFB100231B9F /* signUpViewController.swift in Sources */,
 				06F250F925B9625D007632F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

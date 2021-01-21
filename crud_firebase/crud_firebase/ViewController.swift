@@ -33,5 +33,11 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func singUpTouchButton(_ sender: Any) {
+        let signUp = self.storyboard?.instantiateViewController(identifier: "signUpSB")
+        signUp?.modalPresentationStyle = .fullScreen
+        
+        self.present(signUp!, animated: true, completion: nil)
+    }
 }
 
