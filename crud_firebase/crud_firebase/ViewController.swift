@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "CRUD"
         if let user = Auth.auth().currentUser {
             emailTextField.placeholder = "이미 로그인 된 상태입니다."
             passwordTextField.placeholder = "이미 로그인 된 상태입니다."
@@ -30,6 +31,9 @@ class ViewController: UIViewController {
             } else {
                 print("Login fail")
             }
+            let tabSB = self.storyboard?.instantiateViewController(identifier: "tabbarSB")
+            tabSB?.modalPresentationStyle = .fullScreen
+            self.present(tabSB!, animated: true, completion: nil)
         }
     }
     
@@ -37,7 +41,8 @@ class ViewController: UIViewController {
         let signUp = self.storyboard?.instantiateViewController(identifier: "signUpSB")
         signUp?.modalPresentationStyle = .fullScreen
         
-        self.present(signUp!, animated: true, completion: nil)
+        self.navigationController?.pushViewController(signUp!, animated: true)
+//        self.present(signUp!, animated: true, completion: nil)
     }
 }
 

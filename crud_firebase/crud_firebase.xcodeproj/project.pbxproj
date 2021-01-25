@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		060B1B8725B9CFB100231B9F /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060B1B8625B9CFB100231B9F /* signUpViewController.swift */; };
+		06B356B225BEB12E009E4840 /* tabbarVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B356B125BEB12E009E4840 /* tabbarVC1.swift */; };
+		06B356B725BEB150009E4840 /* tabbarVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B356B625BEB150009E4840 /* tabbarVC2.swift */; };
+		06B356BC25BEB15B009E4840 /* tabbarVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B356BB25BEB15B009E4840 /* tabbarVC3.swift */; };
 		06F250F725B9625D007632F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F250F625B9625D007632F5 /* AppDelegate.swift */; };
 		06F250F925B9625D007632F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F250F825B9625D007632F5 /* SceneDelegate.swift */; };
 		06F250FB25B9625D007632F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F250FA25B9625D007632F5 /* ViewController.swift */; };
@@ -42,6 +45,9 @@
 /* Begin PBXFileReference section */
 		01FB1A571AFDC54A6B5EB396 /* Pods_crud_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crud_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		060B1B8625B9CFB100231B9F /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		06B356B125BEB12E009E4840 /* tabbarVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarVC1.swift; sourceTree = "<group>"; };
+		06B356B625BEB150009E4840 /* tabbarVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarVC2.swift; sourceTree = "<group>"; };
+		06B356BB25BEB15B009E4840 /* tabbarVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarVC3.swift; sourceTree = "<group>"; };
 		06F250F325B9625D007632F5 /* crud_firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crud_firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F250F625B9625D007632F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F250F825B9625D007632F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 				06F2510425B9625E007632F5 /* Info.plist */,
 				06F2512925B9789A007632F5 /* GoogleService-Info.plist */,
 				060B1B8625B9CFB100231B9F /* signUpViewController.swift */,
+				06B356B125BEB12E009E4840 /* tabbarVC1.swift */,
+				06B356B625BEB150009E4840 /* tabbarVC2.swift */,
+				06B356BB25BEB15B009E4840 /* tabbarVC3.swift */,
 			);
 			path = crud_firebase;
 			sourceTree = "<group>";
@@ -414,8 +423,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F250FB25B9625D007632F5 /* ViewController.swift in Sources */,
+				06B356B725BEB150009E4840 /* tabbarVC2.swift in Sources */,
 				06F250F725B9625D007632F5 /* AppDelegate.swift in Sources */,
+				06B356BC25BEB15B009E4840 /* tabbarVC3.swift in Sources */,
 				060B1B8725B9CFB100231B9F /* signUpViewController.swift in Sources */,
+				06B356B225BEB12E009E4840 /* tabbarVC1.swift in Sources */,
 				06F250F925B9625D007632F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
