@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         viewModel.data
             .drive(tableView.rx.items(cellIdentifier: "Cell")) { _, repository, cell in
                 cell.textLabel?.text = repository.repoName
-                cell.textLabel?.text = repository.repoURL
+                cell.detailTextLabel?.text = repository.repoURL
             }
             .disposed(by: disposeBag)
         
