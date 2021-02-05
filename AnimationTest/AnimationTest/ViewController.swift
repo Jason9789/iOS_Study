@@ -30,19 +30,31 @@ class ViewController: UIViewController {
     }
 
     private func start() {
-        var frame = object.frame
-        frame.origin = CGPoint(x: 100, y: 400)
-        frame.size = CGSize(width: 200, height: 200)
+//        var frame = object.frame
+//        frame.origin = CGPoint(x: 100, y: 400)
+//        frame.size = CGSize(width: 200, height: 200)
+//
+//        UIView.animate(withDuration: 1.0, animations: {
+//            self.object.frame = frame
+//            self.object.alpha = 0.5
+//            self.object.backgroundColor = .magenta
+//        }, completion: { finished in
+//            UIView.animate(withDuration: 1.0) {
+//                self.reset()
+//            }
+//        })
         
-        UIView.animate(withDuration: 1.0, animations: {
-            self.object.frame = frame
-            self.object.alpha = 0.5
-            self.object.backgroundColor = .magenta
-        }, completion: { finished in
-            UIView.animate(withDuration: 1.0) {
-                self.reset()
-            }
-        })
+        // Spring animate 효과
+        UIView.animate(withDuration: 2.0,
+                       delay: 0,
+                       usingSpringWithDamping: 0.2,
+                       initialSpringVelocity: 0.2,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.object.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
+                        self.object.alpha = 0.5
+                        self.object.backgroundColor = .magenta
+                       }, completion: nil)
     }
     
     private func reset() {
@@ -51,4 +63,3 @@ class ViewController: UIViewController {
         object.backgroundColor = UIColor.yellow
     }
 }
-
