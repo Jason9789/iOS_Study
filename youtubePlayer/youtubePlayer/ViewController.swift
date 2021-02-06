@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import YoutubePlayer_in_WKWebView
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var playerView: WKYTPlayerView!
+    let playVarsDic = ["playsinline": 1]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        playerView.load(withVideoId: "iimVJFovKps", playerVars: playVarsDic)
     }
-
-
 }
 
