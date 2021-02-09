@@ -40,7 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     let feed = VideoFeedViewController()
-    feed.videos = Video.localVideos()
+//    feed.videos = Video.localVideos()
+    feed.videos = Video.allVideos()
     feed.title = "Travel Vlogs"
     
     let nav = UINavigationController(rootViewController: feed)
