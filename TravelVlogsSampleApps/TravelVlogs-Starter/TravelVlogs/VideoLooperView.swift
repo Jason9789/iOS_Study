@@ -35,7 +35,8 @@ class VideoLooperView: UIView {
     let clips: [VideoClip]
     let videoPlayerView = VideoPlayerView()
     
-    private let player = AVQueuePlayer()
+    @objc private let player = AVQueuePlayer()
+    private var token: NSKeyValueObservation?
     
     private func initializePlayer() {
         videoPlayerView.player = player
@@ -43,6 +44,12 @@ class VideoLooperView: UIView {
         player.play()
         
         addAllVideosToPlayer()
+        
+        token = player.observe(\.currentItem) { [weak self] player, _ in
+            if player.items().count == 1 {
+                self?.addAllVideosToPlayer()
+            }
+        }
     }
     
     private func addAllVideosToPlayer() {
