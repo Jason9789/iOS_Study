@@ -41,12 +41,12 @@ class VideoFeedViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+    videoPreviewLooper.play()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    
+    videoPreviewLooper.pause()
   }
 }
 
