@@ -32,18 +32,39 @@ import UIKit
 import AVFoundation
 
 class VideoLooperView: UIView {
-  let clips: [VideoClip]
-  let videoPlayerView = VideoPlayerView()
-  
-  init(clips: [VideoClip]) {
-    self.clips = clips
+    let clips: [VideoClip]
+    let videoPlayerView = VideoPlayerView()
     
-    super.init(frame: .zero)
-  }
-  
-  // MARK - Unnecessary but necessary Code
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
+    private let player = AVQueuePlayer()
+    
+    private func initializePlayer() {
+        videoPlayerView.player = player
+        player.volume = 0.0
+        player.play()
+        
+        addAllVideosToPlayer()
+    }
+    
+    private func addAllVideosToPlayer() {
+        for video in clips {
+            let asset = AVURLAsset(url: video.url)
+            let item = AVPlayerItem(asset: asset)
+            
+            player.insert(item, after: player.items().last)
+        }
+    }
+    
+    init(clips: [VideoClip]) {
+        self.clips = clips
+        
+        super.init(frame: .zero)
+        initializePlayer()
+    }
+    
+    // MARK - Unnecessary but necessary Code
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
+
