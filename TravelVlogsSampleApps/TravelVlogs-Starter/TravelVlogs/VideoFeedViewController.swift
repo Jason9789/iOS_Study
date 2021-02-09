@@ -29,6 +29,7 @@
  */
 
 import UIKit
+import AVKit
 
 class VideoFeedViewController: UIViewController {
   var videos: [Video] = []
@@ -50,6 +51,7 @@ class VideoFeedViewController: UIViewController {
 }
 
 extension VideoFeedViewController: UITableViewDelegate {
+    
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoCellReuseIdentifier, for: indexPath) as? VideoTableViewCell else {
       return VideoTableViewCell()
@@ -64,7 +66,17 @@ extension VideoFeedViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let video = videos[indexPath.row]
     
+    let videoURL = video.url
+    let player = AVPlayer(url: videoURL)
+    
+    let playerViewController = AVPlayerViewController()
+    playerViewController.player = player
+    
+    present(playerViewController, animated: true) {
+        player.play()
+    }
   }
 }
 
