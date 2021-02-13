@@ -14,6 +14,7 @@
 		0645A1B925D817AC001205F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0645A1B825D817AC001205F2 /* Assets.xcassets */; };
 		0645A1BC25D817AC001205F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0645A1BA25D817AC001205F2 /* LaunchScreen.storyboard */; };
 		0645A1C525D8192C001205F2 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0645A1C425D8192C001205F2 /* MainTableViewCell.swift */; };
+		0645A1C825D81FBC001205F2 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0645A1C725D81FBC001205F2 /* PersonData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0645A1BB25D817AC001205F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0645A1BD25D817AC001205F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0645A1C425D8192C001205F2 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		0645A1C725D81FBC001205F2 /* PersonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				0645A1BA25D817AC001205F2 /* LaunchScreen.storyboard */,
 				0645A1BD25D817AC001205F2 /* Info.plist */,
 				0645A1C425D8192C001205F2 /* MainTableViewCell.swift */,
+				0645A1C725D81FBC001205F2 /* PersonData.swift */,
 			);
 			path = customTableView;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				0645A1B425D817AB001205F2 /* ViewController.swift in Sources */,
 				0645A1B025D817AB001205F2 /* AppDelegate.swift in Sources */,
 				0645A1C525D8192C001205F2 /* MainTableViewCell.swift in Sources */,
+				0645A1C825D81FBC001205F2 /* PersonData.swift in Sources */,
 				0645A1B225D817AB001205F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController {
 
+    var personData: [PersonData] = []
+    private let personNames = ["아이유", "정우성"]
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,3 +44,17 @@ class ViewController: UIViewController, UITableViewDataSource {
 
 }
 
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ talbeView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return personData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as! MainTableViewCell
+        cell.personImage.image = personData[indexPath.row].personImage ?? UIImage(named: "default")
+        cell.personName.text = personData[indexPath.row].personName ?? ""
+        cell.personAge.text = String(personData[indexPath.row].personAge)
+        return cell
+    }
+}
