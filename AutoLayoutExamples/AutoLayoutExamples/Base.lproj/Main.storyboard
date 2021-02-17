@@ -17,20 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9z-Zu-xti">
-                                <rect key="frame" x="20" y="64" width="172" height="778"/>
+                                <rect key="frame" x="20" y="64" width="177" height="778"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ux7-9R-eSN">
-                                <rect key="frame" x="222" y="64" width="172" height="778"/>
+                                <rect key="frame" x="217" y="64" width="177" height="778"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ux7-9R-eSN" firstAttribute="width" secondItem="q9z-Zu-xti" secondAttribute="width" id="4Mo-5f-J6k"/>
+                            <constraint firstItem="ux7-9R-eSN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="q9z-Zu-xti" secondAttribute="trailing" constant="100" id="4Rg-7V-nWE"/>
+                            <constraint firstItem="ux7-9R-eSN" firstAttribute="width" secondItem="q9z-Zu-xti" secondAttribute="width" id="EUo-1C-1e8"/>
                             <constraint firstItem="q9z-Zu-xti" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Kcs-Xe-WPg"/>
-                            <constraint firstItem="ux7-9R-eSN" firstAttribute="leading" secondItem="q9z-Zu-xti" secondAttribute="trailing" constant="30" id="M5d-q9-iOV"/>
+                            <constraint firstItem="ux7-9R-eSN" firstAttribute="leading" secondItem="q9z-Zu-xti" secondAttribute="trailing" constant="20" id="M5d-q9-iOV"/>
                             <constraint firstItem="ux7-9R-eSN" firstAttribute="bottom" secondItem="q9z-Zu-xti" secondAttribute="bottom" id="QTa-wf-v9J"/>
                             <constraint firstItem="q9z-Zu-xti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QpD-TP-CuV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q9z-Zu-xti" secondAttribute="bottom" constant="20" id="Yfp-IC-agk"/>
