@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
         
         // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아옴
-        let filePath:String? = Bundle.main.path(forResource: "video", ofType: "mp4")
+        let filePath:String? = Bundle.main.path(forResource: "video1", ofType: "mov")
         // 앱 내부의 파일명을 NSURL 형식으로 변경
         let urltest = NSURL(fileURLWithPath: filePath!)
         print(urltest)
