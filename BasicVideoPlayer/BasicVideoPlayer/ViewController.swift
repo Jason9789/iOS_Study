@@ -28,9 +28,24 @@ class ViewController: UIViewController {
                 player.play()
             }
     }
+    
+    var video1: String?
+    var player: AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        video1 = Bundle.main.path(forResource: "SampleVideo", ofType: ".mp4")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "seguePlayerController" {
+            let videoURL = NSURL(fileURLWithPath: video1!)
+            player = AVPlayer(url: videoURL as URL)
+            
+            let destination = segue.destination as! AVPlayerViewController
+            destination.player = player
+        }
     }
 
 
