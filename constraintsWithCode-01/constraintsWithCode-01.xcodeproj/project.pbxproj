@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0677C1D425F7B86C00713283 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677C1D325F7B86C00713283 /* StackViewController.swift */; };
+		0677C1D725F900F200713283 /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677C1D625F900F200713283 /* DynamicViewController.swift */; };
 		06B8DA9625F504A000D1206B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B8DA9525F504A000D1206B /* AppDelegate.swift */; };
 		06B8DA9825F504A000D1206B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B8DA9725F504A000D1206B /* SceneDelegate.swift */; };
 		06B8DA9A25F504A000D1206B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B8DA9925F504A000D1206B /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0677C1D325F7B86C00713283 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		0677C1D625F900F200713283 /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
 		06B8DA9225F504A000D1206B /* constraintsWithCode-01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "constraintsWithCode-01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B8DA9525F504A000D1206B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B8DA9725F504A000D1206B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				06B8DA9725F504A000D1206B /* SceneDelegate.swift */,
 				06B8DA9925F504A000D1206B /* ViewController.swift */,
 				06B8DA9B25F504A000D1206B /* Main.storyboard */,
+				0677C1D625F900F200713283 /* DynamicViewController.swift */,
 				06B8DA9E25F504A000D1206B /* Assets.xcassets */,
 				06B8DAA025F504A000D1206B /* LaunchScreen.storyboard */,
 				06B8DAA325F504A000D1206B /* Info.plist */,
@@ -150,6 +153,7 @@
 				06B8DA9625F504A000D1206B /* AppDelegate.swift in Sources */,
 				06B8DA9825F504A000D1206B /* SceneDelegate.swift in Sources */,
 				0677C1D425F7B86C00713283 /* StackViewController.swift in Sources */,
+				0677C1D725F900F200713283 /* DynamicViewController.swift in Sources */,
 				06B8DAAE25F51F8200D1206B /* ConstraintViewController.swift in Sources */,
 				06B8DAAB25F51AEF00D1206B /* AnchorViewController.swift in Sources */,
 			);
