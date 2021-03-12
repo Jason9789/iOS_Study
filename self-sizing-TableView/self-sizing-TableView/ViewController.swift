@@ -28,15 +28,19 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = indexPath.description
-        cell.detailTextLabel?.text = """
+        guard let customCell = cell as? CustomTableViewCell else {
+            return cell
+        }
+        
+        customCell.titleLabel?.text = indexPath.description
+        customCell.postLabel?.text = """
             asdfasdfqwefijaowsdikjfl;askd
             asdikfjoqiwejfoasdlkfjaszlkdf
             asdoikfjo;qiwejf
             asldkjfoqiwjefoaisjdl;k
             """
         cell.detailTextLabel?.numberOfLines = 0
-        cell.imageView?.image = UIImage(named: "\(indexPath.row % 3)")
+        customCell.myImageView?.image = UIImage(named: "\(indexPath.row % 3)")
         
         return cell
     }
