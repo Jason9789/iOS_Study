@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         player.play()
     }
     
+    @IBOutlet weak var testBtn: UIButton!
+    
+    
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     
@@ -36,6 +39,8 @@ class ViewController: UIViewController {
         playerLayer.videoGravity = .resize
 
         vView.layer.addSublayer(playerLayer)
+//        vView.layer.addSublayer(testBtn)
+//        vView.bringSubviewToFront()
         
     }
     

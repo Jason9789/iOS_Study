@@ -18,9 +18,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-x7-5db">
                                 <rect key="frame" x="0.0" y="345" width="414" height="206"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGa-e4-Gi8">
+                                        <rect key="frame" x="8" y="168" width="398" height="30"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="tGa-e4-Gi8" firstAttribute="leading" secondItem="Pv1-x7-5db" secondAttribute="leading" constant="8" id="1FJ-Vf-wBC"/>
+                                    <constraint firstItem="tGa-e4-Gi8" firstAttribute="bottom" secondItem="Pv1-x7-5db" secondAttribute="bottomMargin" id="651-i2-BUw"/>
                                     <constraint firstAttribute="width" secondItem="Pv1-x7-5db" secondAttribute="height" multiplier="207:103" id="FIi-kI-FNt"/>
+                                    <constraint firstAttribute="trailing" secondItem="tGa-e4-Gi8" secondAttribute="trailing" constant="8" id="yui-67-tKq"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ni-6K-2oj">
@@ -54,6 +66,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="testBtn" destination="tGa-e4-Gi8" id="rRI-W9-IQE"/>
                         <outlet property="vView" destination="Pv1-x7-5db" id="6mw-V4-iNR"/>
                     </connections>
                 </viewController>
@@ -63,6 +76,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
