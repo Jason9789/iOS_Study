@@ -14,9 +14,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("layoutCell"),
+                                               object: nil,
+                                               queue: OperationQueue.main,
+                                               using: { (noti) in
+                                                self.tableView.beginUpdates()
+                                                self.tableView.endUpdates()
+                                               })
     }
-
-
 }
 
 
