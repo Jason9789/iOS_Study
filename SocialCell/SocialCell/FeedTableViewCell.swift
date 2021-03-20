@@ -9,6 +9,7 @@ import UIKit
 class FeedTableViewCell: UITableViewCell {
     
     private var imageRatioConstraint: NSLayoutConstraint!
+    private var squareConstraint: NSLayoutConstraint!
     
     var feed: Feed! {
         didSet {
@@ -28,7 +29,7 @@ class FeedTableViewCell: UITableViewCell {
             }
             
             if let image = contentImageView.image {
-                imageRatioConstraint = contentImageView.widthAnchor.constraint(equalTo: contentImageView.widthAnchor, multiplier: image.size.height / image.size.width)
+                imageRatioConstraint = contentImageView.widthAnchor.constraint(equalTo: contentImageView.heightAnchor, multiplier: image.size.width / image.size.height)
             }
         }
     }
@@ -149,7 +150,7 @@ extension FeedTableViewCell {
         profileImageView.widthAnchor.constraint(equalTo: profileImageView.heightAnchor).isActive = true
         profileImageView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.1).isActive = true
         
-        let squareConstraint = contentImageView.widthAnchor.constraint(equalTo: contentImageView.heightAnchor)
+        squareConstraint = contentImageView.widthAnchor.constraint(equalTo: contentImageView.heightAnchor)
         squareConstraint.isActive = true
         squareConstraint.priority = .defaultHigh
         
@@ -171,6 +172,7 @@ extension FeedTableViewCell {
         }
         
         constraint.isActive = !constraint.isActive
+        squareConstraint.isActive = !squareConstraint.isActive
         
         UIView.animate(withDuration: 0.3) {
             self.layoutIfNeeded()
