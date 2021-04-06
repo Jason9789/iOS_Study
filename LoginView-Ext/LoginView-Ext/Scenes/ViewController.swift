@@ -22,15 +22,37 @@ class ViewController: UIViewController {
         let AppleLoginBtn = CustomButton(title: "Apple로 계속하기")
         let GoogleLoginBtn = CustomButton(title: "Google로 계속하기")
         
+        let welcomeTitle = UILabel()
+        welcomeTitle.text = "환영합니다!"
+        welcomeTitle.textColor = .black
+        welcomeTitle.font = UIFont.boldSystemFont(ofSize: 33)
+        welcomeTitle.textAlignment = .center
+        
+        let guideText = UILabel()
+        guideText.text = "로그인 하시면 모든 서비스를\n이용하실 수 있습니다."
+        guideText.textColor = .lightGray
+        guideText.font = UIFont.preferredFont(forTextStyle: .body)
+        guideText.textAlignment = .center
+        guideText.numberOfLines = 0
+
+        let emptyView = UIView()
+        
+        stack.addArrangedSubview(welcomeTitle)
+        stack.addArrangedSubview(guideText)
+        stack.addArrangedSubview(emptyView)
         stack.addArrangedSubview(KakaoLoginBtn)
         stack.addArrangedSubview(AppleLoginBtn)
         stack.addArrangedSubview(GoogleLoginBtn)
         
+        
         self.view.addSubview(stack)
-        stack.anchor(left: self.view.leftAnchor, top: self.view.topAnchor, right: self.view.rightAnchor, paddingLeft: 20, paddingTop: 200, paddingRight: 20)
+        
+        stack.anchor(left: self.view.leftAnchor, top: self.view.topAnchor, right: self.view.rightAnchor, paddingLeft: 20, paddingTop: 300, paddingRight: 20)
+        emptyView.anchor(height: 77)
         KakaoLoginBtn.anchor(height: 56)
         AppleLoginBtn.anchor(height: 56)
         GoogleLoginBtn.anchor(height: 56)
+        
 
         
     }
