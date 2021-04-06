@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         let AppleLoginBtn = CustomButton(title: "Apple로 계속하기")
         let GoogleLoginBtn = CustomButton(title: "Google로 계속하기")
         
+        let logo = UIView()
+        logo.backgroundColor = .lightGray
+        
+        
         let welcomeTitle = UILabel()
         welcomeTitle.text = "환영합니다!"
         welcomeTitle.textColor = .black
@@ -37,6 +41,7 @@ class ViewController: UIViewController {
 
         let emptyView = UIView()
         
+        stack.addArrangedSubview(logo)
         stack.addArrangedSubview(welcomeTitle)
         stack.addArrangedSubview(guideText)
         stack.addArrangedSubview(emptyView)
@@ -47,7 +52,8 @@ class ViewController: UIViewController {
         
         self.view.addSubview(stack)
         
-        stack.anchor(left: self.view.leftAnchor, top: self.view.topAnchor, right: self.view.rightAnchor, paddingLeft: 20, paddingTop: 300, paddingRight: 20)
+        stack.anchor(left: self.view.leftAnchor, top: self.view.topAnchor, right: self.view.rightAnchor, paddingLeft: 20, paddingTop: 0, paddingRight: 20)
+        logo.anchor(top: stack.topAnchor, bottom: welcomeTitle.topAnchor, paddingTop: 140, paddingBottom: 24, width: 130, height: 130)
         emptyView.anchor(height: 77)
         KakaoLoginBtn.anchor(height: 56)
         AppleLoginBtn.anchor(height: 56)
