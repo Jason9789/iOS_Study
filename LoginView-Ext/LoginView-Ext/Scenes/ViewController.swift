@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         let KakaoLoginBtn = CustomButton(title: "카카오로 계속하기")
         let AppleLoginBtn = CustomButton(title: "Apple로 계속하기")
         let GoogleLoginBtn = CustomButton(title: "Google로 계속하기")
+        let withoutLoginBtn = CustomButton(title: "로그인없이 계속 볼래요")
         
         let logo = UIView()
         logo.backgroundColor = .lightGray
@@ -39,7 +40,15 @@ class ViewController: UIViewController {
         guideText.textAlignment = .center
         guideText.numberOfLines = 0
 
+        let orText = UILabel()
+        orText.text = "또는"
+        orText.textColor = .lightGray
+        orText.textAlignment = .center
+        
+        
         let emptyView = UIView()
+        let emptyView2 = UIView()
+        let emptyView3 = UIView()
         
         stack.addArrangedSubview(logo)
         stack.addArrangedSubview(welcomeTitle)
@@ -48,6 +57,10 @@ class ViewController: UIViewController {
         stack.addArrangedSubview(KakaoLoginBtn)
         stack.addArrangedSubview(AppleLoginBtn)
         stack.addArrangedSubview(GoogleLoginBtn)
+        stack.addArrangedSubview(emptyView2)
+        stack.addArrangedSubview(orText)
+        stack.addArrangedSubview(emptyView3)
+        stack.addArrangedSubview(withoutLoginBtn)
         
         
         self.view.addSubview(stack)
@@ -58,6 +71,13 @@ class ViewController: UIViewController {
         KakaoLoginBtn.anchor(height: 56)
         AppleLoginBtn.anchor(height: 56)
         GoogleLoginBtn.anchor(height: 56)
+        emptyView2.anchor(height: 16)
+        withoutLoginBtn.anchor(height: 56)
+        emptyView3.anchor(height: 4)
+        withoutLoginBtn.backgroundColor = UIColor(red: 255/255, green: 235/255, blue: 235/255, alpha: 1)
+        withoutLoginBtn.setTitleColor(UIColor(red: 255/255, green: 100/255, blue: 90/255, alpha: 1), for: .normal)
+        withoutLoginBtn.layer.borderWidth = 1
+        withoutLoginBtn.layer.borderColor = UIColor.red.cgColor
         
 
         
