@@ -27,6 +27,14 @@ class ViewController: UIViewController {
         return st
     }()
     
+    var nextButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("다음", for: .normal)
+        btn.backgroundColor = UIColor(red: 255/255, green: 100/255, blue: 90/255, alpha: 1)
+        
+        return btn
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewInit()
@@ -41,6 +49,7 @@ class ViewController: UIViewController {
     private func addView() {
         self.view.addSubview(firstTitle)
         self.view.addSubview(secondTitle)
+        self.view.addSubview(nextButton)
         
         firstTitle.snp.makeConstraints { (make) in
             make.top.equalTo(self.view).offset(161)
@@ -50,6 +59,13 @@ class ViewController: UIViewController {
         secondTitle.snp.makeConstraints { (make) in
             make.top.equalTo(firstTitle.snp.bottom).offset(10)
             make.left.equalTo(self.view).offset(20)
+        }
+        
+        nextButton.snp.makeConstraints{ (make) in
+            make.height.equalTo(56)
+            make.bottom.equalTo(self.view).offset(-32)
+            make.left.equalTo(self.view).offset(20)
+            make.right.equalTo(self.view).offset(-20)
         }
     }
 }
