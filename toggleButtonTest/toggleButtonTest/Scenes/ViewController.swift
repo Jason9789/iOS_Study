@@ -9,24 +9,47 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
-
-    var box: UIButton = {
-        let btn = UIButton()
-        btn.setTitle("버튼", for: .normal)
-        btn.backgroundColor = .blue
+    
+    var firstTitle: UILabel = {
+        let ft = UILabel()
+        ft.text = "관심 있는 악기를 선택 해주세요."
+        ft.font = UIFont.boldSystemFont(ofSize: 22)
         
+        return ft
+    }()
+    
+    var secondTitle: UILabel = {
+        let st = UILabel()
+        st.text = "좀 더 관련있는 컨텐츠를 찾을 수 있습니다."
+        st.textColor = UIColor.lightGray
+        st.font = UIFont.boldSystemFont(ofSize: 14)
         
-        return btn
+        return st
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewInit()
+        addView()
+    }
+    
+    private func viewInit() {
         self.view.backgroundColor = .white
+        self.navigationItem.title = "맞춤 정보 설정"
+    }
+    
+    private func addView() {
+        self.view.addSubview(firstTitle)
+        self.view.addSubview(secondTitle)
         
-        self.view.addSubview(box)
-        box.snp.makeConstraints { (make) in
-            make.width.height.equalTo(50)
-            make.center.equalTo(self.view)
+        firstTitle.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view).offset(161)
+            make.left.equalTo(self.view).offset(20)
+        }
+        
+        secondTitle.snp.makeConstraints { (make) in
+            make.top.equalTo(firstTitle.snp.bottom).offset(10)
+            make.left.equalTo(self.view).offset(20)
         }
     }
 }
