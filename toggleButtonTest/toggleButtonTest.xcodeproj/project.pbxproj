@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		06331E73261F2C130062B134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06331E72261F2C130062B134 /* ViewController.swift */; };
 		06331E78261F2C140062B134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06331E77261F2C140062B134 /* Assets.xcassets */; };
 		06331E7B261F2C140062B134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06331E79261F2C140062B134 /* LaunchScreen.storyboard */; };
+		0697DAEB262059B6009B9983 /* instrumentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697DAEA262059B6009B9983 /* instrumentButton.swift */; };
 		CB53B34C3A4C0DCDFC241C18 /* Pods_toggleButtonTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01EE21A041CA944DF664653 /* Pods_toggleButtonTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		06331E77261F2C140062B134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06331E7A261F2C140062B134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06331E7C261F2C140062B134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0697DAEA262059B6009B9983 /* instrumentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instrumentButton.swift; sourceTree = "<group>"; };
 		3DB2521640BAF48F59D37623 /* Pods-toggleButtonTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toggleButtonTest.debug.xcconfig"; path = "Target Support Files/Pods-toggleButtonTest/Pods-toggleButtonTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9EC080D8679AC40B2584F788 /* Pods-toggleButtonTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toggleButtonTest.release.xcconfig"; path = "Target Support Files/Pods-toggleButtonTest/Pods-toggleButtonTest.release.xcconfig"; sourceTree = "<group>"; };
 		C01EE21A041CA944DF664653 /* Pods_toggleButtonTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_toggleButtonTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				06331E72261F2C130062B134 /* ViewController.swift */,
+				0697DAEA262059B6009B9983 /* instrumentButton.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -93,7 +96,6 @@
 				3DB2521640BAF48F59D37623 /* Pods-toggleButtonTest.debug.xcconfig */,
 				9EC080D8679AC40B2584F788 /* Pods-toggleButtonTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -220,6 +222,7 @@
 			files = (
 				06331E73261F2C130062B134 /* ViewController.swift in Sources */,
 				06331E6F261F2C130062B134 /* AppDelegate.swift in Sources */,
+				0697DAEB262059B6009B9983 /* instrumentButton.swift in Sources */,
 				06331E71261F2C130062B134 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
